@@ -1,12 +1,12 @@
 export const page3 = {
-  id: "3",
+  id: 3,
   question: "Is your search optimized specifically for fashion?",
 
   options: ["Yes", "No"],
 };
 
 export const page4 = {
-  id: "4",
+  id: 4,
   question: "Which of the following features does your existing search offer",
   options: [
     "Auto correct spellings & recognize synonyms for key attributes",
@@ -20,7 +20,7 @@ export const page4 = {
 };
 
 export const page5 = {
-  id: "5",
+  id: 5,
   question: "Which of the following features does your existing search offer",
   options: [
     "Auto correct spellings & recognize synonyms for key attributes",
@@ -35,27 +35,27 @@ export const page5 = {
 };
 
 export const page6 = {
-  id: "6",
+  id: 6,
   question:
     "On a scale of 1 to 10, how would you rate the Search visibility, UI & UX of your current search bar?",
-  options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
 };
 
 export const page7 = {
-  id: "7",
+  id: 7,
   question: "Does your Search analytics give you actionable insights?",
   options: ["Yes", "No"],
 };
 
 export const page8 = {
-  id: "8",
+  id: 8,
   question:
     "Was your existing search easy to integrate, without any heavy tech and IT support?",
   options: ["Yes", "No"],
 };
 
 export const page9 = {
-  id: "9",
+  id: 9,
   question: "Location",
   options: ["India", "International", "Both"],
 };

@@ -1,4 +1,4 @@
-const Button = ({ option, text, onClick, value }) => {
+const Button = ({ text, onClick, value }) => {
   // console.log(value)
   return (
     <button
@@ -7,7 +7,7 @@ const Button = ({ option, text, onClick, value }) => {
       value={value}
       className="btn"
     >
-      <div className="btn-option">{option}</div>
+      <div className="btn-option">{value}</div>
       <div className="btn-text">{text}</div>
     </button>
   );

@@ -6,6 +6,7 @@ import "./style.css";
 import FirstPage from "./Components/FirstPage";
 import SecondPage from "./Components/SecondPage";
 import CommanPage from "./Components/CommonPage/CommanPage";
+import RatingPage from "./Components/RatingPage";
 import {
   page3,
   page4,
@@ -35,7 +36,7 @@ class App extends Component {
             <CommanPage page={page5} />
           </Route>
           <Route path="/page-6">
-            <CommanPage page={page6} />
+            <RatingPage page={page6} />
           </Route>
           <Route path="/page-7">
             <CommanPage page={page7} />
