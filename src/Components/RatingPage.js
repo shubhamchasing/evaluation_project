@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-
+import RatingButton from "./Button/RatingButton";
 import NavigationButton from "./Button/NavigationButton";
 import * as action from "../Store/ActionCreators/actionCreator";
 
@@ -22,7 +22,8 @@ class RatingPage extends Component {
   state = { rating: "" };
 
   componentDidMount() {
-    this.setState({ ...this.props.details });
+    //console.log(this.props.details.rating)
+    this.setState({ rating: this.props.details.rating });
   }
 
   handleOnClick = (e) => {
@@ -41,7 +42,8 @@ class RatingPage extends Component {
 
   render() {
     const { question, options, id } = this.props.page;
-    // console.log(this.state.selected);
+    const selectedOption = this.state.rating;
+    //console.log(this.state.rating);
     return (
       <div className="main">
         <div className="questions-page">
@@ -50,19 +52,20 @@ class RatingPage extends Component {
             <p>{question} </p>
           </div>
           <div className="btn-box">
-          <div className="btn-rating-box">
-            {options.map((each, index) => {
-              return (
-                <button className="btn-rating"
-                  onClick={(e) => {
-                    this.handleOnClick(e);
-                  }}
-                  value={each}
-                  key={index}
-                  type="button"
-                >{each}</button>
-              );
-            })}
+            <div className="btn-rating-box">
+              {options.map((each, index) => {
+                return (
+                  <RatingButton
+                    onClick={(e) => {
+                      this.handleOnClick(e);
+                    }}
+                    value={each}
+                    key={index}
+                    selected={selectedOption === each}
+                    type="button"
+                  />
+                );
+              })}
             </div>
             <p>Add choice</p>
             <div className="navigation-box">
@@ -80,8 +83,7 @@ class RatingPage extends Component {
                   this.handleSaveUserDetails();
                 }}
               />
-            
-          </div>
+            </div>
           </div>
         </div>
       </div>

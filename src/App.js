@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact path="/" component={FirstPage} />
           <Route path="/page-2" component={SecondPage} />
           <Route path="/page-3">
-            <CommanPage page={page3} />
+            <RatingPage page={page3} />
           </Route>
           <Route path="/page-4">
             <CommanPage page={page4} />
@@ -36,7 +36,7 @@ class App extends Component {
             <CommanPage page={page5} />
           </Route>
           <Route path="/page-6">
-            <RatingPage page={page6} />
+            <CommanPage page={page6} />
           </Route>
           <Route path="/page-7">
             <CommanPage page={page7} />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const NavigationButton = ({to, onClick , value, isDisabled}) => {
     
-    const btnEnableDisable = !isDisabled ? "nav-btn-enable" : "nav-btn-disabled";
+   // const btnEnableDisable = !isDisabled ? "nav-btn-enable" : "nav-btn-disabled";
 
 
     return ( <Link to = {to}>

@@ -1,5 +1,5 @@
-export const page3 = {
-  id: 3,
+export const page6 = {
+  id: 6,
   question: "Is your search optimized specifically for fashion?",
 
   options: ["Yes", "No"],
@@ -34,8 +34,8 @@ export const page5 = {
   ],
 };
 
-export const page6 = {
-  id: 6,
+export const page3 = {
+  id: 3,
   question:
     "On a scale of 1 to 10, how would you rate the Search visibility, UI & UX of your current search bar?",
   options: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],

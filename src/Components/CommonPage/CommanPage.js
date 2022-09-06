@@ -6,7 +6,7 @@ import NavigationButton from "../Button/NavigationButton";
 import * as action from "../../Store/ActionCreators/actionCreator";
 
 const mapStateToProps = (state) => {
-  console.log("state", state);
+  //console.log("state", state);
   return {
     details: state.data,
   };
@@ -22,11 +22,12 @@ class CommanPage extends Component {
   state = { selected: {} };
 
   componentDidMount() {
-    this.setState({ ...this.props.details });
+    console.log(this.props.details[this.props.page.id]);
+    this.setState({ selected: { ...this.props.details[this.props.page.id] } });
   }
 
   componentDidUpdate(prevProps) {
-    // console.log(this.props.details);
+    //console.log(this.props.details);
 
     if (this.props.page.id !== prevProps.page.id) {
       this.setState(
@@ -66,6 +67,8 @@ class CommanPage extends Component {
 
   render() {
     const { question, options, id } = this.props.page;
+    const selectedOption = Object.keys(this.state.selected);
+    //console.log(selectedOption)
     // console.log(this.state.selected);
     return (
       <div className="main">
@@ -78,6 +81,7 @@ class CommanPage extends Component {
             {options.map((each, index) => {
               let alphabet = String.fromCharCode(65 + index);
               let option = { [alphabet]: each };
+
               return (
                 <Button
                   onClick={(e) => {
@@ -87,6 +91,7 @@ class CommanPage extends Component {
                   text={each}
                   key={index}
                   type="button"
+                  selected={selectedOption.includes(alphabet)}
                 />
               );
             })}
