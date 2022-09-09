@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c79395ee.css",
+    "main.js": "/static/js/main.81f29a57.js",
+    "static/js/787.410cf8dc.chunk.js": "/static/js/787.410cf8dc.chunk.js",
+    "static/media/marten-newhall-uAFjFsMS3YY-unsplash 1.svg": "/static/media/marten-newhall-uAFjFsMS3YY-unsplash 1.e323f5784fa7e8cdf286.svg",
+    "static/media/bould-regular-webfont.ttf": "/static/media/bould-regular-webfont.e4e15cd306ffdc6c3cee.ttf",
+    "index.html": "/index.html",
+    "main.c79395ee.css.map": "/static/css/main.c79395ee.css.map",
+    "main.81f29a57.js.map": "/static/js/main.81f29a57.js.map",
+    "787.410cf8dc.chunk.js.map": "/static/js/787.410cf8dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c79395ee.css",
+    "static/js/main.81f29a57.js"
+  ]
+}
