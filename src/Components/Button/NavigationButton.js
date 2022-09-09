@@ -6,7 +6,7 @@ const NavigationButton = ({to, onClick , value, isDisabled}) => {
    // const btnEnableDisable = !isDisabled ? "nav-btn-enable" : "nav-btn-disabled";
 
 
-    return ( <Link to = {to}>
+    return ( <Link to = {to} className="link">
     <button type="button" 
     onClick={() => {
         onClick();

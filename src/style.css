@@ -35,13 +35,14 @@
   background: #fcfcff;
   border: 3px solid #29847f;
   border-radius: 60px;
-  width: 40%;
+  width: 581px;
+  height: 105px;
 }
 
 .search-bar {
   border: none;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 40px;
   border-radius: 60px;
   padding-left: 20px;
   outline: none;
@@ -67,10 +68,11 @@
   background: #29847f;
   border-radius: 16px;
   border: none;
-  width: 164px;
-  height: 60px;
+  width: 204px;
+  height: 80px;
   color: white;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -78,6 +80,8 @@
   color: #29847f;
   display: flex;
   justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* page 2 */
@@ -253,6 +257,10 @@
   display: flex;
   gap: 2rem;
   padding-top: 1rem;
+}
+.link {
+
+  text-decoration: none;
 }
 
 /* rating page */

@@ -26,7 +26,7 @@ class FirstPage extends Component {
               className="search-icon"
               alt="search"
               src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-            />
+            /> 
           </div>
           <div className="button-box">
             <Link to={"page-2"}>
