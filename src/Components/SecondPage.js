@@ -73,9 +73,7 @@ class SecondPage extends Component {
                     />
                   </div>
                 </div>
-              </form>
-            </div>
-            <div className="navigation-box">
+                <div className="navigation-box">
             <NavigationButton
                 to={"/"}
                 value={"Prev"}
@@ -91,6 +89,9 @@ class SecondPage extends Component {
                 }}
               />
             </div>
+              </form>
+            </div>
+            
           </div>
           <div className="svg-box"></div>
         </div>
