@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import RatingButton from "./Button/RatingButton";
-import NavigationButton from "./Button/NavigationButton";
+import RatingButton from "./Buttons/RatingButton";
+import NavigationButton from "./Buttons/NavigationButton";
 import * as action from "../Store/ActionCreators/actionCreator";
 
 const mapStateToProps = (state) => {

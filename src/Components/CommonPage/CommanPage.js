@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import Button from "../Button/Button";
+import Button from "../Buttons/Button";
 import { connect } from "react-redux";
 
-import NavigationButton from "../Button/NavigationButton";
+import NavigationButton from "../Buttons/NavigationButton";
 import * as action from "../../Store/ActionCreators/actionCreator";
+import * as api from "../Api/api";
 
 const mapStateToProps = (state) => {
   //console.log("state", state);
@@ -22,7 +23,7 @@ class CommanPage extends Component {
   state = { selected: {} };
 
   componentDidMount() {
-    console.log(this.props.details[this.props.page.id]);
+    // console.log(this.props.details[this.props.page.id]);
     this.setState({ selected: { ...this.props.details[this.props.page.id] } });
   }
 
@@ -30,12 +31,9 @@ class CommanPage extends Component {
     //console.log(this.props.details);
 
     if (this.props.page.id !== prevProps.page.id) {
-      this.setState(
-        { selected: { ...this.props.details[this.props.page.id] } },
-        () => {
-          console.log(this.state.selected);
-        }
-      );
+      this.setState({
+        selected: { ...this.props.details[this.props.page.id] },
+      });
     }
   }
 
@@ -57,12 +55,16 @@ class CommanPage extends Component {
     }
   };
 
-  handleSaveUserDetails = () => {
+  handleSaveUserDetails = (e) => {
+    //console.log(e.target)
     let response = {
       [this.props.page.id]: { ...this.state.selected },
     };
     this.props.responses(response);
     //this.setState({ selected: {} });
+    if (e.target.value === "Next" && this.props.page.id === 8) {
+      api.formSubmit(this.props.details);
+    }
   };
 
   render() {
@@ -100,15 +102,15 @@ class CommanPage extends Component {
               <NavigationButton
                 to={"page-" + (id - 1)}
                 value={"Prev"}
-                onClick={() => {
-                  this.handleSaveUserDetails();
+                onClick={(e) => {
+                  this.handleSaveUserDetails(e);
                 }}
               />
               <NavigationButton
                 to={"page-" + (id + 1)}
                 value={"Next"}
-                onClick={() => {
-                  this.handleSaveUserDetails();
+                onClick={(e) => {
+                  this.handleSaveUserDetails(e);
                 }}
               />
             </div>

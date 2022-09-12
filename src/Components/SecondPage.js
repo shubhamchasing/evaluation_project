@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import NavigationButton from "./Button/NavigationButton";
+import NavigationButton from "./Buttons/NavigationButton";
 
 import * as action from "../Store/ActionCreators/actionCreator";
 

@@ -8,10 +8,11 @@ const NavigationButton = ({to, onClick , value, isDisabled}) => {
 
     return ( <Link to = {to} className="link">
     <button type="button" 
-    onClick={() => {
-        onClick();
+    onClick={(e) => {
+        onClick(e);
       }} 
       className = {`nav-btn`}
+      value = {value}
       >{value}
         </button></Link> );
 }
