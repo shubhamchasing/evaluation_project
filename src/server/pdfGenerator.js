@@ -4,12 +4,9 @@ const fs = require("fs");
 const PDFMerger = require("pdf-merger-js");
 
 const getPdf = async (results) => {
-  console.log("results",results)
-
   const logo = fs.readFileSync(
     path.join(__dirname, "../../data/icons/5fed71c81cba0c290d1753da_Logo.png")
   );
- // console.log(logo)
 
   const robotoRegular = fs
     .readFileSync(
@@ -56,10 +53,15 @@ const getPdf = async (results) => {
   doc.addImage(logo, "PNG", 22, 270, 32, 4);
 
   doc.save("first page.pdf");
-  console.log("something")
+
   await pdfMerger.add("first page.pdf");
-  await pdfMerger.add(path.join(__dirname,"../../data/pdf/FASHION SEARCH-2-18.pdf"));
+  await pdfMerger.add(
+    path.join(__dirname, "../../data/pdf/FASHION SEARCH-2-18.pdf")
+  );
+
   await pdfMerger.save("FASHION SEARCH.pdf");
 };
 
-module.exports = {getPdf}
+module.exports = { getPdf };
+
+

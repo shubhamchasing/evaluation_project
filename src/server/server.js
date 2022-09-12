@@ -22,6 +22,8 @@ app.listen(PORT, () => {
 app.post("/page-8",   (req, res) => {
   // console.log(req.body);
   let results = getScore(req.body);
-   getPdf(results)
+  getPdf(results).then(()=>{
+    console.log("pdf generated.")
+  })
   res.status(200).json("From Submited");
 });
