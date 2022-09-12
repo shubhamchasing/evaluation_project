@@ -19,9 +19,9 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-app.post("/page-8", async (req, res) => {
+app.post("/page-8",   (req, res) => {
   // console.log(req.body);
   let results = getScore(req.body);
-  // await getPdf(results);
+   getPdf(results)
   res.status(200).json("From Submited");
 });

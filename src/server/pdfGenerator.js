@@ -9,6 +9,7 @@ const getPdf = async (results) => {
   const logo = fs.readFileSync(
     path.join(__dirname, "../../data/icons/5fed71c81cba0c290d1753da_Logo.png")
   );
+ // console.log(logo)
 
   const robotoRegular = fs
     .readFileSync(
@@ -57,7 +58,7 @@ const getPdf = async (results) => {
   doc.save("first page.pdf");
   console.log("something")
   await pdfMerger.add("first page.pdf");
-  await pdfMerger.add("FASHION SEARCH-2-18.pdf");
+  await pdfMerger.add(path.join(__dirname,"../../data/pdf/FASHION SEARCH-2-18.pdf"));
   await pdfMerger.save("FASHION SEARCH.pdf");
 };
 
