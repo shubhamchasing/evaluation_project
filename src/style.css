@@ -1,6 +1,6 @@
 @font-face {
   font-family: "bouldregular";
-  src: url("../fonts/Bould font/bould-regular-webfont.ttf") format("truetype");
+  src: url("../data/fonts/Bould font/bould-regular-webfont.ttf") format("truetype");
 }
 
 * {
@@ -148,7 +148,7 @@
 .svg-box {
   width: 50%;
   height: 100%;
-  background-image: url("./images/marten-newhall-uAFjFsMS3YY-unsplash\ 1.svg");
+  background-image: url("../data/images/marten-newhall-uAFjFsMS3YY-unsplash\ 1.svg");
 
   background-position: center;
   background-size: cover;

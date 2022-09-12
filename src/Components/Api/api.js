@@ -1,5 +1,5 @@
 export const formSubmit = (data) => {
-  console.log(data);
+  //console.log(data);
   return fetch("http://localhost:5000/page-8", {
     method: "POST",
     headers: {

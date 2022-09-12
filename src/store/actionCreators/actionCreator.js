@@ -1,4 +1,4 @@
-import { actionTypes } from "../Actions/actions";
+import { actionTypes } from "../actions/actions";
 
 export const userDetails = (details) => {
   return {

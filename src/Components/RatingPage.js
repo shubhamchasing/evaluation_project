@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import RatingButton from "./Buttons/RatingButton";
 import NavigationButton from "./Buttons/NavigationButton";
-import * as action from "../Store/ActionCreators/actionCreator";
+import * as action from "../store/actionCreators/actionCreator";
 
 const mapStateToProps = (state) => {
   //console.log("state", state);

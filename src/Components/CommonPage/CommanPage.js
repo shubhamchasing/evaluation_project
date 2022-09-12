@@ -3,7 +3,7 @@ import Button from "../Buttons/Button";
 import { connect } from "react-redux";
 
 import NavigationButton from "../Buttons/NavigationButton";
-import * as action from "../../Store/ActionCreators/actionCreator";
+import * as action from "../../store/actionCreators/actionCreator";
 import * as api from "../Api/api";
 
 const mapStateToProps = (state) => {
@@ -63,6 +63,7 @@ class CommanPage extends Component {
     this.props.responses(response);
     //this.setState({ selected: {} });
     if (e.target.value === "Next" && this.props.page.id === 8) {
+     // console.log(this.props.details)
       api.formSubmit(this.props.details);
     }
   };

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import NavigationButton from "./Buttons/NavigationButton";
 
-import * as action from "../Store/ActionCreators/actionCreator";
+import * as action from "../store/actionCreators/actionCreator";
 
 const mapStateToProps = (state) => {
   return {

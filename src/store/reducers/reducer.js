@@ -1,4 +1,4 @@
-import { actionTypes } from "../Actions/actions";
+import { actionTypes } from "../actions/actions";
 
 const intialState = {
   data: {},
