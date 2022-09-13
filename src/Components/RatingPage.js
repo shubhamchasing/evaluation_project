@@ -31,6 +31,15 @@ class RatingPage extends Component {
     this.setState({ rating: value });
   };
 
+  handleCheck = () => {
+   // console.log(this.state);
+    if (this.state.rating !== undefined) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   handleSaveUserDetails = () => {
     let response = {
       ...this.state,
@@ -75,6 +84,7 @@ class RatingPage extends Component {
                 onClick={() => {
                   this.handleSaveUserDetails();
                 }}
+                isDisabled={false}
               />
               <NavigationButton
                 to={"page-" + (id + 1)}
@@ -82,6 +92,7 @@ class RatingPage extends Component {
                 onClick={() => {
                   this.handleSaveUserDetails();
                 }}
+                isDisabled={this.handleCheck()}
               />
             </div>
           </div>

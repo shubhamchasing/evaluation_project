@@ -31,7 +31,19 @@ class SecondPage extends Component {
     this.setState({ email: e.target.value });
   };
 
-  handleSaveUserDetails = () => {
+  handleCheck = () => {
+    let emailRegex = new RegExp(
+      "([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([!#-'*+/-9=?A-Z^-~-]+(.[!#-'*+/-9=?A-Z^-~-]+)*|[[\t -Z^-~]*])"
+    );
+
+    if (this.state.name.length > 2 && emailRegex.test(this.state.email)) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
+  handleSaveUserDetails = (e) => {
     let details = { ...this.state };
 
     this.props.userDetails(details);
@@ -40,7 +52,7 @@ class SecondPage extends Component {
     return (
       <div className="main">
         <div className="page-2">
-          <div className="form-outer-box" >
+          <div className="form-outer-box">
             <div className="form-box">
               <form>
                 <div className="input-wrapper">
@@ -74,24 +86,25 @@ class SecondPage extends Component {
                   </div>
                 </div>
                 <div className="navigation-box">
-            <NavigationButton
-                to={"/"}
-                value={"Prev"}
-                onClick={() => {
-                  this.handleSaveUserDetails();
-                }}
-              />
-              <NavigationButton
-                to={"page-3"}
-                value={"Next"}
-                onClick={() => {
-                  this.handleSaveUserDetails();
-                }}
-              />
-            </div>
+                  <NavigationButton
+                    to={"/"}
+                    value={"Prev"}
+                    onClick={(e) => {
+                      this.handleSaveUserDetails(e);
+                    }}
+                    isDisabled={false}
+                  />
+                  <NavigationButton
+                    to={"page-3"}
+                    value={"Next"}
+                    onClick={(e) => {
+                      this.handleSaveUserDetails(e);
+                    }}
+                    isDisabled={this.handleCheck()}
+                  />
+                </div>
               </form>
             </div>
-            
           </div>
           <div className="svg-box"></div>
         </div>
@@ -101,7 +114,6 @@ class SecondPage extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SecondPage);
-
 
 // <Link to={"/"}>
 //                 <button type="button">Previous</button>{" "}

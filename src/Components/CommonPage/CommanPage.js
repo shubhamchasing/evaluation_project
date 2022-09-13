@@ -55,6 +55,14 @@ class CommanPage extends Component {
     }
   };
 
+  handleCheck = () => {
+    if (Object.keys(this.state.selected).length > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   handleSaveUserDetails = (e) => {
     //console.log(e.target)
     let response = {
@@ -63,7 +71,7 @@ class CommanPage extends Component {
     this.props.responses(response);
     //this.setState({ selected: {} });
     if (e.target.value === "Next" && this.props.page.id === 8) {
-     // console.log(this.props.details)
+      // console.log(this.props.details)
       api.formSubmit(this.props.details);
     }
   };
@@ -106,13 +114,15 @@ class CommanPage extends Component {
                 onClick={(e) => {
                   this.handleSaveUserDetails(e);
                 }}
+                isDisabled = {false}
               />
               <NavigationButton
-                to={"page-" + (id + 1)}
+                to={ "page-" + (id + 1)}
                 value={"Next"}
                 onClick={(e) => {
-                  this.handleSaveUserDetails(e);
+                  this.handleSaveUserDetails(e);  
                 }}
+                isDisabled = {this.handleCheck()}
               />
             </div>
           </div>
