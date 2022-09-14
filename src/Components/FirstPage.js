@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import searchIcon from "./search.svg";
 
 class FirstPage extends Component {
   state = {};
@@ -12,7 +13,13 @@ class FirstPage extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div
+        className="main"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          this.keyPressHandler(e);
+        }}
+      >
         <div className="page-1">
           <div className="search-box">
             <input
@@ -22,11 +29,7 @@ class FirstPage extends Component {
               required={true}
             />
 
-            <img
-              className="search-icon"
-              alt="search"
-              src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
-            /> 
+            <img className="search-icon" alt="search" src={searchIcon} />
           </div>
           <div className="button-box">
             <Link to={"page-2"}>
@@ -34,14 +37,7 @@ class FirstPage extends Component {
                 START
               </button>
             </Link>
-            <span
-              tabIndex={0}
-              onKeyDown={(e) => {
-                this.keyPressHandler(e);
-              }}
-            >
-              Press ENTER
-            </span>
+            <span>Press ENTER</span>
           </div>
         </div>
       </div>

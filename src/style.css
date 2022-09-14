@@ -1,6 +1,7 @@
 @font-face {
   font-family: "bouldregular";
-  src: url("../data/fonts/Bould font/bould-regular-webfont.ttf") format("truetype");
+  src: url("../data/fonts/Bould font/bould-regular-webfont.ttf")
+    format("truetype");
 }
 
 * {
@@ -32,10 +33,13 @@
 
 .search-box {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   background: #fcfcff;
   border: 3px solid #29847f;
   border-radius: 60px;
-  width: 40%;
+  width: 35%;
+  height: 12%;
 }
 
 .search-bar {
@@ -53,8 +57,8 @@
 }
 
 .search-icon {
-  width: 75px;
-  height: 75px;
+  width: 30px;
+  height: 38px;
 }
 
 .button-box {
@@ -247,7 +251,6 @@
   width: 4rem;
   border-radius: 0.5rem;
   cursor: pointer;
- 
 }
 
 .nav-btn-disabled {
@@ -261,7 +264,6 @@
   padding-top: 1rem;
 }
 .link {
-
   text-decoration: none;
 }
 
@@ -284,4 +286,87 @@
 
 .btn-rating-selected {
   background: white;
+}
+
+/* submit page */
+
+.page-9 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 41px;
+  flex: 1;
+  background: #a9e0dd;
+  border-radius: 16px;
+}
+
+.search-box-submit-page {
+  margin-top: 4rem;
+}
+/* 
+.vector-box {
+  position: relative;
+  text-align: center;
+} */
+/* 
+.vector {
+  background : linear-gradient(53.28deg, #144340 16.12%, #29847f 87.55%);
+  
+} */
+
+
+.report-name {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000000;
+  margin-top: 1rem;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+  margin-top: 3rem;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 1.5;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart .circle {
+  stroke: url(#linear);
+  /* stroke-dasharray: 75, 100 */
+
+}
+
+.percentage {
+  fill: #000000;
+  font-size: 0.6em;
+  text-anchor: middle;
+  font-weight: 500;
+}
+
+
+
+.report-des {
+  font-weight: 500;
+  font-size: 18px;
+  color: #144340;
+  margin-top: 2rem;
 }

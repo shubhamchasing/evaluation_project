@@ -6,7 +6,7 @@ const { getScore } = require("./score");
 const { getPdf } = require("./pdfGenerator");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "http://localhost:3001",
 };
 
 app.use(cors(corsOptions));
@@ -25,5 +25,5 @@ app.post("/page-8",   (req, res) => {
   getPdf(results).then(()=>{
     console.log("pdf generated.")
   })
-  res.status(200).json("From Submited");
+  res.status(200).json({results});
 });

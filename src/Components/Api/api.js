@@ -9,7 +9,5 @@ export const formSubmit = (data) => {
     body: JSON.stringify(data),
   })
     .then((res) => res.json())
-    .then((res) => {
-      console.log(res);
-    });
+    .catch((err) => console.error(err));
 };

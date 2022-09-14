@@ -4,14 +4,14 @@ import { connect } from "react-redux";
 
 import NavigationButton from "../Buttons/NavigationButton";
 import * as action from "../../store/actionCreators/actionCreator";
-import * as api from "../Api/api";
+//import * as api from "../Api/api";
 
 const mapStateToProps = (state) => {
   //console.log("state", state);
   return {
     details: state.data,
   };
-};
+}; 
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -70,10 +70,10 @@ class CommanPage extends Component {
     };
     this.props.responses(response);
     //this.setState({ selected: {} });
-    if (e.target.value === "Next" && this.props.page.id === 8) {
-      // console.log(this.props.details)
-      api.formSubmit(this.props.details);
-    }
+    // if (e.target.value === "Next" && this.props.page.id === 8) {
+    //   // console.log(this.props.details)
+    //   api.formSubmit(this.props.details);
+    // }
   };
 
   render() {

@@ -8,6 +8,7 @@ import FirstPage from "./Components/FirstPage";
 import SecondPage from "./Components/SecondPage";
 import CommanPage from "./Components/CommonPage/CommanPage";
 import RatingPage from "./Components/RatingPage";
+import SubmitPage from "./Components/SubmitPage";
 import {
   page3,
   page4,
@@ -15,7 +16,7 @@ import {
   page6,
   page7,
   page8,
-} from "./questions/questions"
+} from "./questions/questions";
 
 class App extends Component {
   state = {};
@@ -41,7 +42,9 @@ class App extends Component {
             <RatingPage page={page4} />
           </Route>
           <Route path="/page-5">
-            <CommanPage page={this.renderBasedOnLocation() ? page5[0] : page5[1]} />
+            <CommanPage
+              page={this.renderBasedOnLocation() ? page5[0] : page5[1]}
+            />
           </Route>
           <Route path="/page-6">
             <CommanPage page={page6} />
@@ -52,7 +55,9 @@ class App extends Component {
           <Route path="/page-8">
             <CommanPage page={page8} />
           </Route>
-      
+          <Route path="/page-9">
+            <SubmitPage />
+          </Route>
         </Switch>
       </Router>
     );
