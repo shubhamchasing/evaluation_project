@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import * as api from "./Api/api";
 
-import searchIcon from "./search.svg";
+import searchIcon from "../data/icons/search.svg";
 
 const mapStateToProps = (state) => {
   //console.log("state", state);

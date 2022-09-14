@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import searchIcon from "./search.svg";
+import searchIcon from "../data/icons/search.svg";
 
 class FirstPage extends Component {
   state = {};

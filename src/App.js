@@ -16,7 +16,7 @@ import {
   page6,
   page7,
   page8,
-} from "./questions/questions";
+} from "./data/questions/questions";
 
 class App extends Component {
   state = {};
