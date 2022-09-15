@@ -24,22 +24,8 @@ class RatingPage extends Component {
   componentDidMount() {
     //console.log(this.props.details.rating)
     this.setState({ rating: this.props.details.rating });
-    window.addEventListener('beforeunload', this.onUnload);
-
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('beforeunload', this.onUnload);
-}
-
-
-onUnload = () =>{
-  console.log(this.props.history)
-  this.props.history.push('/')
-}
-onUnload = () =>{
-  this.props.history.push('/')
-}
 
   handleOnClick = (e) => {
     let value = e.currentTarget.value;
