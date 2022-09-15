@@ -6,7 +6,7 @@ const { getScore } = require("./score");
 const { getPdf } = require("./pdfGenerator");
 
 const corsOptions = {
-  origin: "http://localhost:3001",
+  origin: "http://localhost:3000",
 };
 
 app.use(cors(corsOptions));

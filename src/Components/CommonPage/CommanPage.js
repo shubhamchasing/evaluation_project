@@ -25,6 +25,7 @@ class CommanPage extends Component {
   componentDidMount() {
     // console.log(this.props.details[this.props.page.id]);
     this.setState({ selected: { ...this.props.details[this.props.page.id] } });
+    window.addEventListener('beforeunload', this.onUnload);
   }
 
   componentDidUpdate(prevProps) {
@@ -35,7 +36,13 @@ class CommanPage extends Component {
         selected: { ...this.props.details[this.props.page.id] },
       });
     }
+    window.removeEventListener('beforeunload', this.onUnload);
   }
+
+  onUnload = () =>{
+    this.props.history.push('/')
+  }
+
 
   handleOnClick = (e, option) => {
     let value = e.currentTarget.value;
